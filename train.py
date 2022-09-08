@@ -59,5 +59,6 @@ def train(net, train_iter, test_iter, num_epochs, lr, device):
 
 lr, num_epochs = 0.9, 20
 train(net, train_iter, test_iter, num_epochs, lr, try_gpu())
+torch.save(net.state_dict(), 'lenet.pt')
 
 writer.close()
